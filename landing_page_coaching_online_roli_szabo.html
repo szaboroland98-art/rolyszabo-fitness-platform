@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Roli Szabo | Coaching Online 1-la-1 – Transformare Sustenabilă</title>
     <meta name="description" content="Slăbește 4–8 kg în următoarele 90 de zile și remodelează-ți corpul, mâncând alimentele care îți plac. Sistemul de coaching 1-la-1 creat de Roli Szabo.">
-    
+
     <!-- Google Fonts: Plus Jakarta Sans & Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
-    
+
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -34,63 +34,50 @@
     </script>
 
     <style>
-        /* Custom styles for subtle glassmorphism, gradients, and smooth animations */
         body {
             background-color: #0B1120;
             color: #F8FAFC;
             overflow-x: hidden;
         }
-
         .hero-glow {
             background: radial-gradient(circle at 75% 25%, rgba(16, 185, 129, 0.14) 0%, rgba(11, 17, 32, 0) 60%);
         }
-
         .card-hover {
             transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.3s ease, box-shadow 0.3s ease;
         }
-
         .card-hover:hover {
             transform: translateY(-4px);
             border-color: rgba(16, 185, 129, 0.45);
             box-shadow: 0 20px 40px -15px rgba(16, 185, 129, 0.12);
         }
-
         .btn-primary {
             background: linear-gradient(135deg, #10B981 0%, #059669 100%);
             transition: all 0.25s ease;
         }
-
         .btn-primary:hover {
             transform: translateY(-2px);
             box-shadow: 0 12px 28px -6px rgba(16, 185, 129, 0.45);
             filter: brightness(1.06);
         }
-
-        /* Scroll Reveal Animation */
         .reveal {
             opacity: 0;
             transform: translateY(24px);
             transition: opacity 0.7s ease-out, transform 0.7s ease-out;
         }
-
         .reveal.active {
             opacity: 1;
             transform: translateY(0);
         }
-
-        /* Accordion Smooth Transition */
         .faq-content {
             max-height: 0;
             overflow: hidden;
             transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease;
             opacity: 0;
         }
-
         .faq-item.open .faq-content {
             max-height: 320px;
             opacity: 1;
         }
-
         .faq-item.open .faq-icon {
             transform: rotate(180deg);
             color: #10B981;
@@ -102,18 +89,14 @@
     <!-- ==================== 1. NAVBAR MINIMALIST ==================== -->
     <header class="fixed top-0 left-0 right-0 z-50 bg-[#0B1120]/85 backdrop-blur-md border-b border-slate-800/80">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-            <!-- Brand Logo -->
             <a href="#" class="flex items-center gap-2.5 group">
-                <div class="w-9 h-9 rounded-lg bg-emerald-500/15 border border-emerald-500/40 flex items-center justify-center text-emerald-400 font-display font-extrabold text-lg group-hover:bg-emerald-500 group-hover:text-slate-950 transition-colors">
-                    RS
-                </div>
+                <div class="w-9 h-9 rounded-lg bg-emerald-500/15 border border-emerald-500/40 flex items-center justify-center text-emerald-400 font-display font-extrabold text-lg">RS</div>
                 <div class="flex flex-col">
                     <span class="font-display font-extrabold tracking-tight text-white text-base sm:text-lg leading-none">ROLI SZABO</span>
                     <span class="text-[11px] font-semibold tracking-widest text-emerald-400 uppercase mt-0.5">Online Coaching</span>
                 </div>
             </a>
 
-            <!-- Desktop Navigation -->
             <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
                 <a href="#probleme" class="hover:text-emerald-400 transition-colors">De ce nu merge</a>
                 <a href="#metoda" class="hover:text-emerald-400 transition-colors">Metoda</a>
@@ -122,20 +105,14 @@
                 <a href="#intrebari" class="hover:text-emerald-400 transition-colors">Întrebări</a>
             </nav>
 
-            <!-- CTA Button + Mobile Menu Trigger -->
             <div class="flex items-center gap-3">
-                <a href="#aplica" class="btn-primary text-slate-950 font-display font-bold text-xs sm:text-sm px-4 sm:px-5 py-2.5 rounded-xl">
-                    Aplică Acum
-                </a>
+                <a href="#aplica" class="btn-primary text-slate-950 font-display font-bold text-xs sm:text-sm px-4 sm:px-5 py-2.5 rounded-xl">Aplică Acum</a>
                 <button id="mobile-menu-btn" aria-label="Deschide meniul" class="md:hidden p-2 rounded-lg text-slate-300 hover:bg-slate-800 hover:text-white transition-colors">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
-                    </svg>
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
                 </button>
             </div>
         </div>
 
-        <!-- Mobile Dropdown Navigation -->
         <div id="mobile-menu" class="hidden md:hidden bg-[#0F172A] border-b border-slate-800 px-4 pt-2 pb-5 space-y-2">
             <a href="#probleme" class="mobile-link block px-3 py-2.5 rounded-lg text-slate-300 hover:bg-slate-800/70 hover:text-emerald-400 font-medium">De ce nu merge</a>
             <a href="#metoda" class="mobile-link block px-3 py-2.5 rounded-lg text-slate-300 hover:bg-slate-800/70 hover:text-emerald-400 font-medium">Metoda 1-la-1</a>
@@ -149,91 +126,61 @@
     <section class="relative pt-32 pb-20 lg:pt-40 lg:pb-28 hero-glow border-b border-slate-800/60">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid lg:grid-cols-12 gap-12 lg:gap-10 items-center">
-                
-                <!-- Left Column: Copy & CTAs -->
+
                 <div class="lg:col-span-7 space-y-6">
-                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-display font-bold tracking-wider uppercase">
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-display font-bold">
                         <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
                         Coaching Online 1-la-1 • Locuri Limitate
                     </div>
 
                     <h1 class="font-display font-extrabold text-3xl sm:text-4xl lg:text-[44px] text-white leading-[1.16] tracking-tight">
-                        Slăbește <span class="text-emerald-400">4–8 kg în următoarele 90 de zile</span> și remodelează-ți corpul, mâncând alimentele care îți plac – fără să petreci ore în bucătărie sau în sală.
+                        Slăbește <span class="text-emerald-400">4–8 kg în următoarele 90 de zile</span> și remodelează-ți corpul, mâncând alimentele care îți plac – fără să petreci ore în bucătărie.
                     </h1>
 
                     <p class="text-slate-300 text-base sm:text-lg leading-relaxed max-w-2xl">
-                        Sistemul de coaching 1-la-1 creat pentru oameni ocupați, bazat pe <strong class="text-white font-semibold">7 ani de experiență practică</strong> în sala de fitness. Fără diete drastice, fără rețete complicate, 100% adaptat programului tău.
+                        Sistemul de coaching 1-la-1 creat pentru oameni ocupați, bazat pe <strong class="text-white font-semibold">7 ani de experiență practică</strong> în sala de fitness. Fără extreme, fără diete imposibile, doar un plan adaptat ție.
                     </p>
 
-                    <!-- Action Buttons -->
                     <div class="pt-2 flex flex-col sm:flex-row gap-4">
                         <a href="#aplica" class="btn-primary text-slate-950 font-display font-extrabold text-base px-7 py-4 rounded-xl text-center inline-flex items-center justify-center gap-2.5">
                             <span>Vreau o discuție gratuită de 15 minute</span>
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
-                            </svg>
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
                         </a>
-                        <a href="#metoda" class="px-6 py-4 rounded-xl bg-slate-800/70 hover:bg-slate-800 border border-slate-700 text-white font-display font-semibold text-base text-center transition-colors">
-                            Vezi cum funcționează
-                        </a>
+                        <a href="#metoda" class="px-6 py-4 rounded-xl bg-slate-800/70 hover:bg-slate-800 border border-slate-700 text-white font-display font-semibold text-base text-center transition-colors">Vezi cum funcționează</a>
                     </div>
 
-                    <!-- Trust Micro-Proof -->
                     <div class="pt-4 flex flex-wrap items-center gap-x-6 gap-y-2 text-xs sm:text-sm text-slate-400">
-                        <div class="flex items-center gap-2">
-                            <svg class="w-4 h-4 text-emerald-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
-                            <span>Fără înfometare sau liste interzise</span>
-                        </div>
-                        <div class="flex items-center gap-2">
-                            <svg class="w-4 h-4 text-emerald-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
-                            <span>Doar 3–4 antrenamente/săptămână</span>
-                        </div>
-                        <div class="flex items-center gap-2">
-                            <svg class="w-4 h-4 text-emerald-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
-                            <span>Suport direct pe WhatsApp</span>
-                        </div>
+                        <span>Fără înfometare sau liste interzise</span>
+                        <span>Doar 3–4 antrenamente/săptămână</span>
+                        <span>Suport direct pe WhatsApp</span>
                     </div>
                 </div>
 
                 <!-- Right Column: Coach Visual & Key Authority Metrics -->
                 <div class="lg:col-span-5">
                     <div class="relative rounded-2xl bg-[#131C31] border border-slate-800 p-4 sm:p-5 shadow-2xl">
-                        <!-- Coach Photo Placeholder -->
+                        <!-- Fotografie Antrenor -->
                         <div class="relative aspect-[4/4.3] rounded-xl overflow-hidden bg-slate-900 border border-slate-800">
-                            <img 
-                                src="https://placehold.co/600x650/131C31/10B981?text=ROLI+SZABO%0A%40rolyszabo.coach%0A(Fotografie+Antrenor)" 
-                                alt="Roli Szabo - Antrenor Personal & Online Coach" 
-                                class="w-full h-full object-cover"
-                                onerror="this.src='https://placehold.co/600x650/1E293B/FFFFFF?text=Roli+Szabo+Coaching'"
+                            <img
+                                src="WhatsApp%20Image%202026-11-13%20at%2019.42.21.jpeg"
+                                alt="Roli Szabo - Antrenor Personal & Online Coach"
+                                class="w-full h-full object-cover object-center"
                             >
                             <div class="absolute inset-0 bg-gradient-to-t from-[#0B1120] via-transparent to-transparent opacity-90"></div>
-                            
-                            <!-- Bottom Overlay Info inside Image -->
+
                             <div class="absolute bottom-4 left-4 right-4 flex items-end justify-between">
                                 <div>
                                     <p class="font-display font-bold text-white text-lg">Roli Szabo</p>
                                     <p class="text-emerald-400 text-xs font-medium">@rolyszabo.coach</p>
                                 </div>
-                                <span class="px-3 py-1 rounded-lg bg-emerald-500/20 border border-emerald-500/40 text-emerald-300 text-xs font-semibold backdrop-blur-sm">
-                                    7+ Ani Experiență
-                                </span>
+                                <span class="px-3 py-1 rounded-lg bg-emerald-500/20 border border-emerald-500/40 text-emerald-300 text-xs font-semibold backdrop-blur-sm">7+ Ani Experiență</span>
                             </div>
                         </div>
 
-                        <!-- 3 Key Metrics Bar -->
                         <div class="grid grid-cols-3 gap-2.5 mt-4">
-                            <div class="bg-[#0B1120] border border-slate-800/90 rounded-xl p-3 text-center">
-                                <p class="font-display font-extrabold text-emerald-400 text-lg sm:text-xl">7+ Ani</p>
-                                <p class="text-[11px] text-slate-400 leading-tight mt-0.5">Experiență în sală</p>
-                            </div>
-                            <div class="bg-[#0B1120] border border-slate-800/90 rounded-xl p-3 text-center">
-                                <p class="font-display font-extrabold text-white text-lg sm:text-xl">100%</p>
-                                <p class="text-[11px] text-slate-400 leading-tight mt-0.5">Plan personalizat</p>
-                            </div>
-                            <div class="bg-[#0B1120] border border-slate-800/90 rounded-xl p-3 text-center">
-                                <p class="font-display font-extrabold text-emerald-400 text-lg sm:text-xl">0%</p>
-                                <p class="text-[11px] text-slate-400 leading-tight mt-0.5">Înfometare</p>
-                            </div>
+                            <div class="bg-[#0B1120] border border-slate-800/90 rounded-xl p-3 text-center"><p class="font-display font-extrabold text-emerald-400 text-lg sm:text-xl">7+ Ani</p><p class="text-[11px] text-slate-400 leading-tight mt-0.5">Experiență în sală</p></div>
+                            <div class="bg-[#0B1120] border border-slate-800/90 rounded-xl p-3 text-center"><p class="font-display font-extrabold text-white text-lg sm:text-xl">100%</p><p class="text-[11px] text-slate-400 leading-tight mt-0.5">Plan personalizat</p></div>
+                            <div class="bg-[#0B1120] border border-slate-800/90 rounded-xl p-3 text-center"><p class="font-display font-extrabold text-emerald-400 text-lg sm:text-xl">0%</p><p class="text-[11px] text-slate-400 leading-tight mt-0.5">Înfometare</p></div>
                         </div>
                     </div>
                 </div>
@@ -242,588 +189,106 @@
         </div>
     </section>
 
-    <!-- ==================== 3. SECȚIUNEA PAIN POINTS ("TE REGĂSEȘTI AICI?") ==================== -->
+    <!-- ==================== 3. SECȚIUNEA PAIN POINTS ==================== -->
     <section id="probleme" class="py-20 lg:py-28 bg-[#0B1120]">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="max-w-3xl mx-auto text-center mb-14 reveal">
                 <span class="text-emerald-400 font-display font-bold text-xs tracking-widest uppercase">Realitatea din teren</span>
-                <h2 class="font-display font-extrabold text-2xl sm:text-4xl text-white mt-2">
-                    Ai încercat deja să slăbești sau să te tonifiezi, dar te-ai lovit de aceleași obstacole?
-                </h2>
-                <p class="text-slate-400 mt-4 text-base sm:text-lg">
-                    Dacă bifezi cel puțin două dintre situațiile de mai jos, problema nu este lipsa ta de ambiție, ci metoda pe care ai folosit-o.
-                </p>
+                <h2 class="font-display font-extrabold text-2xl sm:text-4xl text-white mt-2">Ai încercat deja să slăbești sau să te tonifiezi, dar te-ai lovit de aceleași obstacole?</h2>
             </div>
 
             <div class="grid md:grid-cols-2 gap-6">
-                <!-- Pain Card 1 -->
-                <div class="reveal card-hover bg-[#131C31] border border-slate-800 rounded-2xl p-6 sm:p-8 flex gap-5">
-                    <div class="w-12 h-12 rounded-xl bg-rose-500/10 border border-rose-500/25 text-rose-400 flex items-center justify-center shrink-0">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                        </svg>
-                    </div>
-                    <div>
-                        <h3 class="font-display font-bold text-white text-lg">Efectul „Luni încep, Vineri renunț”</h3>
-                        <p class="text-slate-400 text-sm sm:text-base mt-2 leading-relaxed">
-                            Începi o dietă strictă luni dimineață, dar până vineri cedezi pentru că îți este foame constant și simți că nu ai voie să mănânci nimic din ce îți place.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Pain Card 2 -->
-                <div class="reveal card-hover bg-[#131C31] border border-slate-800 rounded-2xl p-6 sm:p-8 flex gap-5">
-                    <div class="w-12 h-12 rounded-xl bg-rose-500/10 border border-rose-500/25 text-rose-400 flex items-center justify-center shrink-0">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                        </svg>
-                    </div>
-                    <div>
-                        <h3 class="font-display font-bold text-white text-lg">Program încărcat și zero timp de gătit</h3>
-                        <p class="text-slate-400 text-sm sm:text-base mt-2 leading-relaxed">
-                            Ai un job solicitant, familie sau deplasări și pur și simplu nu ai timp să stai în bucătărie să gătești 5 caserole diferite pe zi sau să petreci 2 ore la sală.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Pain Card 3 -->
-                <div class="reveal card-hover bg-[#131C31] border border-slate-800 rounded-2xl p-6 sm:p-8 flex gap-5">
-                    <div class="w-12 h-12 rounded-xl bg-rose-500/10 border border-rose-500/25 text-rose-400 flex items-center justify-center shrink-0">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 17h8m0 0V9m0 8l-8-8-4 4-6-6"/>
-                        </svg>
-                    </div>
-                    <div>
-                        <h3 class="font-display font-bold text-white text-lg">Muncești la sală, dar oglinda stagnează</h3>
-                        <p class="text-slate-400 text-sm sm:text-base mt-2 leading-relaxed">
-                            Mergi la sală, depui efort și transpiri, dar corpul tău arată la fel ca acum 6 luni pentru că îți lipsește o structură clară de progresie și nutriție adaptată.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Pain Card 4 -->
-                <div class="reveal card-hover bg-[#131C31] border border-slate-800 rounded-2xl p-6 sm:p-8 flex gap-5">
-                    <div class="w-12 h-12 rounded-xl bg-rose-500/10 border border-rose-500/25 text-rose-400 flex items-center justify-center shrink-0">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
-                        </svg>
-                    </div>
-                    <div>
-                        <h3 class="font-display font-bold text-white text-lg">Te-ai săturat de PDF-uri generice de 1200 kcal</h3>
-                        <p class="text-slate-400 text-sm sm:text-base mt-2 leading-relaxed">
-                            Planurile copiate la indigo îți taie toată energia, îți încetinesc metabolismul și îți aduc toate kilogramele înapoi (plus dobândă) imediat ce te oprești.
-                        </p>
-                    </div>
-                </div>
+                <div class="reveal card-hover bg-[#131C31] border border-slate-800 rounded-2xl p-6 sm:p-8"><h3 class="font-display font-bold text-white text-lg">Efectul „Luni încep, Vineri renunț”</h3><p class="text-slate-400 mt-2">Începi o dietă strictă luni, dar până vineri cedezi pentru că îți este foame și simți că nu ai voie să mănânci nimic din ce îți place.</p></div>
+                <div class="reveal card-hover bg-[#131C31] border border-slate-800 rounded-2xl p-6 sm:p-8"><h3 class="font-display font-bold text-white text-lg">Program încărcat și zero timp de gătit</h3><p class="text-slate-400 mt-2">Ai un job solicitant, familie sau deplasări și pur și simplu nu ai timp să stai în bucătărie ore întregi.</p></div>
+                <div class="reveal card-hover bg-[#131C31] border border-slate-800 rounded-2xl p-6 sm:p-8"><h3 class="font-display font-bold text-white text-lg">Muncești la sală, dar oglinda stagnează</h3><p class="text-slate-400 mt-2">Depui efort, dar corpul nu se schimbă pentru că îți lipsesc o progresie clară și o nutriție adaptată.</p></div>
+                <div class="reveal card-hover bg-[#131C31] border border-slate-800 rounded-2xl p-6 sm:p-8"><h3 class="font-display font-bold text-white text-lg">PDF-uri generice de 1200 kcal</h3><p class="text-slate-400 mt-2">Ai nevoie de un plan personalizat care să funcționeze în viața ta, nu de o dietă copiată pentru toată lumea.</p></div>
             </div>
         </div>
     </section>
 
-    <!-- ==================== 4. SECȚIUNEA METODA (4 PILONI) ==================== -->
+    <!-- ==================== 4. SECȚIUNEA METODA ==================== -->
     <section id="metoda" class="py-20 lg:py-28 bg-[#0F172A] border-y border-slate-800/70">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="max-w-3xl mx-auto text-center mb-16 reveal">
                 <span class="text-emerald-400 font-display font-bold text-xs tracking-widest uppercase">Sistemul pas cu pas</span>
-                <h2 class="font-display font-extrabold text-2xl sm:text-4xl text-white mt-2">
-                    Nu ai nevoie de mai multă voință. Ai nevoie de un sistem care se mulează pe viața ta.
-                </h2>
-                <p class="text-slate-400 mt-4 text-base sm:text-lg">
-                    Iată cei 4 piloni pe care construim transformarea ta în următoarele 90 de zile:
-                </p>
+                <h2 class="font-display font-extrabold text-2xl sm:text-4xl text-white mt-2">Nu ai nevoie de mai multă voință. Ai nevoie de un sistem care se mulează pe viața ta.</h2>
             </div>
 
             <div class="grid md:grid-cols-2 gap-6 lg:gap-8">
-                <!-- Pillar 01 -->
-                <div class="reveal card-hover bg-[#131C31] border border-slate-800 rounded-2xl p-7 sm:p-8 relative overflow-hidden">
-                    <div class="flex items-center justify-between mb-5">
-                        <span class="font-display font-extrabold text-3xl text-emerald-400/90">01</span>
-                        <span class="px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-400 text-xs font-semibold">Fără interdicții</span>
-                    </div>
-                    <h3 class="font-display font-bold text-xl text-white mb-3">Nutriție Flexibilă (Mănânci ce îți place)</h3>
-                    <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
-                        Primești un plan alimentar personalizat, construit pe preferințele tale – inclusiv opțiuni rapide de 10 minute dacă ești mereu pe fugă și loc pentru o masă liberă săptămânală. Totul este calculat la gram (în crud) pentru precizie maximă, fără să elimini alimentele preferate.
-                    </p>
-                </div>
-
-                <!-- Pillar 02 -->
-                <div class="reveal card-hover bg-[#131C31] border border-slate-800 rounded-2xl p-7 sm:p-8 relative overflow-hidden">
-                    <div class="flex items-center justify-between mb-5">
-                        <span class="font-display font-extrabold text-3xl text-emerald-400/90">02</span>
-                        <span class="px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-400 text-xs font-semibold">3–4 zile / săpt.</span>
-                    </div>
-                    <h3 class="font-display font-bold text-xl text-white mb-3">Antrenamente Structurate pe Timpul Tău</h3>
-                    <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
-                        Fie că ai la dispoziție 3 zile pe săptămână sau 4, primești un program exact de antrenament (pentru sală sau acasă) cu demonstrații video clare pentru fiecare exercițiu, astfel încât să știi mereu ce ai de făcut și să progresezi fără accidentări.
-                    </p>
-                </div>
-
-                <!-- Pillar 03 -->
-                <div class="reveal card-hover bg-[#131C31] border border-slate-800 rounded-2xl p-7 sm:p-8 relative overflow-hidden">
-                    <div class="flex items-center justify-between mb-5">
-                        <span class="font-display font-extrabold text-3xl text-emerald-400/90">03</span>
-                        <span class="px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-400 text-xs font-semibold">Ajustări reale</span>
-                    </div>
-                    <h3 class="font-display font-bold text-xl text-white mb-3">Monitorizare Săptămânală (Check-in 1-la-1)</h3>
-                    <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
-                        Nu primești un plan și apoi ești lăsat singur. În fiecare săptămână analizăm evoluția (greutate, circumferințe, nivel de energie, poze) și ajustăm caloriile sau volumul de antrenament ca să nu te blochezi niciodată.
-                    </p>
-                </div>
-
-                <!-- Pillar 04 -->
-                <div class="reveal card-hover bg-[#131C31] border border-slate-800 rounded-2xl p-7 sm:p-8 relative overflow-hidden">
-                    <div class="flex items-center justify-between mb-5">
-                        <span class="font-display font-extrabold text-3xl text-emerald-400/90">04</span>
-                        <span class="px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-400 text-xs font-semibold">Răspuns rapid</span>
-                    </div>
-                    <h3 class="font-display font-bold text-xl text-white mb-3">Suport Direct pe WhatsApp cu Mine</h3>
-                    <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
-                        Ești la restaurant și nu știi ce să comanzi? Ai dubii legate de execuția unui exercițiu și vrei să îmi trimiți o filmare? Îmi scrii direct pe WhatsApp și primești feedback real, nu de la un robot, ci direct de la mine.
-                    </p>
-                </div>
+                <div class="reveal card-hover bg-[#131C31] border border-slate-800 rounded-2xl p-7"><span class="font-display font-extrabold text-3xl text-emerald-400/90">01</span><h3 class="font-display font-bold text-xl text-white mt-3">Nutriție Flexibilă</h3><p class="text-slate-300 mt-3">Primești un plan construit pe preferințele tale, cu mese rapide și opțiuni pentru situații socială.</p></div>
+                <div class="reveal card-hover bg-[#131C31] border border-slate-800 rounded-2xl p-7"><span class="font-display font-extrabold text-3xl text-emerald-400/90">02</span><h3 class="font-display font-bold text-xl text-white mt-3">Antrenamente Structurate</h3><p class="text-slate-300 mt-3">Program exact pentru sală sau acasă, cu demonstrații clare pentru fiecare exercițiu.</p></div>
+                <div class="reveal card-hover bg-[#131C31] border border-slate-800 rounded-2xl p-7"><span class="font-display font-extrabold text-3xl text-emerald-400/90">03</span><h3 class="font-display font-bold text-xl text-white mt-3">Monitorizare Săptămânală</h3><p class="text-slate-300 mt-3">Analizăm greutatea, circumferințele, energia și progresul, apoi ajustăm planul.</p></div>
+                <div class="reveal card-hover bg-[#131C31] border border-slate-800 rounded-2xl p-7"><span class="font-display font-extrabold text-3xl text-emerald-400/90">04</span><h3 class="font-display font-bold text-xl text-white mt-3">Suport Direct pe WhatsApp</h3><p class="text-slate-300 mt-3">Ai răspunsuri rapide când ai dubii legate de masă, antrenament sau progres.</p></div>
             </div>
         </div>
     </section>
 
-    <!-- ==================== 5. SECȚIUNEA REZULTATE (DOVEZI SOCIALE) ==================== -->
-    <section id="rezultate" class="py-20 lg:py-28 bg-[#0B1120]">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="max-w-3xl mx-auto text-center mb-16 reveal">
-                <span class="text-emerald-400 font-display font-bold text-xs tracking-widest uppercase">Studii de caz reale</span>
-                <h2 class="font-display font-extrabold text-2xl sm:text-4xl text-white mt-2">
-                    Oameni ocupați, rezultate reale
-                </h2>
-                <p class="text-slate-400 mt-4 text-base sm:text-lg">
-                    Nu lucrez cu sportivi profesioniști care au toată ziua liberă. Lucrez cu oameni care au joburi, responsabilități și o viață socială.
-                </p>
-            </div>
-
-            <div class="grid lg:grid-cols-3 gap-7">
-                <!-- Case Study 1 -->
-                <div class="reveal card-hover bg-[#131C31] border border-slate-800 rounded-2xl p-6 flex flex-col justify-between">
-                    <div>
-                        <div class="flex items-center justify-between gap-2 mb-4">
-                            <span class="px-3 py-1 rounded-lg bg-emerald-500/15 border border-emerald-500/30 text-emerald-400 font-display font-bold text-xs">
-                                +4.2 kg Masă Curată
-                            </span>
-                            <span class="text-xs text-slate-400">Office Worker</span>
-                        </div>
-                        <div class="rounded-xl overflow-hidden bg-slate-900 border border-slate-800 mb-5 aspect-[16/10]">
-                            <img 
-                                src="https://placehold.co/500x320/0F172A/10B981?text=Bernadett+(27+ani)%0A46+kg+%E2%86%92+50.2+kg" 
-                                alt="Transformare Bernadett 27 ani" 
-                                class="w-full h-full object-cover"
-                            >
-                        </div>
-                        <p class="text-slate-300 text-sm sm:text-base italic leading-relaxed">
-                            „Lucrez 8 ore la laptop și credeam că nu pot pune masă musculară fără să mă îngraș. În prima lună am crescut curat de la 46 kg la 50.2 kg, cu mult mai multă energie pe tot parcursul zilei.”
-                        </p>
-                    </div>
-                    <div class="mt-6 pt-4 border-t border-slate-800/80 flex items-center justify-between">
-                        <div>
-                            <p class="font-display font-bold text-white text-sm">Bernadett, 27 ani</p>
-                            <p class="text-xs text-slate-400">Tonifiere & Masă Musculară</p>
-                        </div>
-                        <div class="flex text-emerald-400 text-xs">★★★★★</div>
-                    </div>
-                </div>
-
-                <!-- Case Study 2 -->
-                <div class="reveal card-hover bg-[#131C31] border border-slate-800 rounded-2xl p-6 flex flex-col justify-between">
-                    <div>
-                        <div class="flex items-center justify-between gap-2 mb-4">
-                            <span class="px-3 py-1 rounded-lg bg-emerald-500/15 border border-emerald-500/30 text-emerald-400 font-display font-bold text-xs">
-                                Slăbire Fără Dietă Strictă
-                            </span>
-                            <span class="text-xs text-slate-400">Ture de noapte</span>
-                        </div>
-                        <div class="rounded-xl overflow-hidden bg-slate-900 border border-slate-800 mb-5 aspect-[16/10]">
-                            <img 
-                                src="https://placehold.co/500x320/0F172A/10B981?text=Client%C4%83+(28+ani)%0AProgram+Ture+de+Noapte" 
-                                alt="Transformare program ture de noapte" 
-                                class="w-full h-full object-cover"
-                            >
-                        </div>
-                        <p class="text-slate-300 text-sm sm:text-base italic leading-relaxed">
-                            „Lucrez în ture de noapte și aveam un program complet dat peste cap. Cu mese simple, rapide și doar 3 antrenamente pe săptămână, am dat jos kilogramele în plus fără să simt că sunt la dietă.”
-                        </p>
-                    </div>
-                    <div class="mt-6 pt-4 border-t border-slate-800/80 flex items-center justify-between">
-                        <div>
-                            <p class="font-display font-bold text-white text-sm">Andreea, 28 ani</p>
-                            <p class="text-xs text-slate-400">Slăbire & Structură Alimentară</p>
-                        </div>
-                        <div class="flex text-emerald-400 text-xs">★★★★★</div>
-                    </div>
-                </div>
-
-                <!-- Case Study 3 -->
-                <div class="reveal card-hover bg-[#131C31] border border-slate-800 rounded-2xl p-6 flex flex-col justify-between">
-                    <div>
-                        <div class="flex items-center justify-between gap-2 mb-4">
-                            <span class="px-3 py-1 rounded-lg bg-emerald-500/15 border border-emerald-500/30 text-emerald-400 font-display font-bold text-xs">
-                                -7 kg & Talie Redusă
-                            </span>
-                            <span class="text-xs text-slate-400">3 Antrenamente / săpt.</span>
-                        </div>
-                        <div class="rounded-xl overflow-hidden bg-slate-900 border border-slate-800 mb-5 aspect-[16/10]">
-                            <img 
-                                src="https://placehold.co/500x320/0F172A/10B981?text=Client+(42+ani)%0ASl%C4%83bire+Sustenabil%C4%83" 
-                                alt="Transformare bărbat 40+ ani" 
-                                class="w-full h-full object-cover"
-                            >
-                        </div>
-                        <p class="text-slate-300 text-sm sm:text-base italic leading-relaxed">
-                            „Fără înfometare, cu gustări structurate pe care le pot lua ușor la birou și 3 antrenamente pe săptămână, am reușit să scad constant în greutate și să scap de grăsimea abdominală.”
-                        </p>
-                    </div>
-                    <div class="mt-6 pt-4 border-t border-slate-800/80 flex items-center justify-between">
-                        <div>
-                            <p class="font-display font-bold text-white text-sm">Cristian, 42 ani</p>
-                            <p class="text-xs text-slate-400">Slăbire Sustenabilă & Energie</p>
-                        </div>
-                        <div class="flex text-emerald-400 text-xs">★★★★★</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ==================== 6. SECȚIUNEA DESPRE MINE (AUTORITATE) ==================== -->
+    <!-- ==================== 5. SECȚIUNEA DESPRE MINE ==================== -->
     <section id="despre" class="py-20 lg:py-28 bg-[#0F172A] border-y border-slate-800/70">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid lg:grid-cols-12 gap-12 items-center reveal">
-                <!-- Image / Visual Authority -->
                 <div class="lg:col-span-5">
                     <div class="relative rounded-2xl overflow-hidden border border-slate-800 bg-[#131C31] p-3">
-                        <img 
-                            src="https://placehold.co/550x620/131C31/FFFFFF?text=Roli+Szabo%0A7+Ani+%C3%AEn+Sala+de+Fitness" 
-                            alt="Roli Szabo în sala de fitness" 
-                            class="w-full rounded-xl object-cover aspect-[4/4.5]"
-                        >
-                        <div class="mt-3 px-2 py-2 flex items-center justify-between text-xs text-slate-400">
-                            <span>Antrenor Personal Certificat</span>
-                            <span class="text-emerald-400 font-semibold">Consecvență > Extreme</span>
-                        </div>
+                        <img src="WhatsApp%20Image%202026-11-13%20at%2019.42.21.jpeg" alt="Roli Szabo în sala de fitness" class="w-full rounded-xl object-cover object-center aspect-[4/4.5]">
+                        <div class="mt-3 px-2 py-2 flex items-center justify-between text-xs text-slate-400"><span>Antrenor Personal</span><span class="text-emerald-400 font-semibold">Consecvență > Extreme</span></div>
                     </div>
                 </div>
 
-                <!-- Story & Philosophy -->
                 <div class="lg:col-span-7 space-y-6">
                     <span class="text-emerald-400 font-display font-bold text-xs tracking-widest uppercase">Cine te va ghida</span>
-                    <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-white">
-                        Salut, sunt Roli!
-                    </h2>
+                    <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-white">Salut, sunt Roli!</h2>
                     <div class="space-y-4 text-slate-300 text-base sm:text-lg leading-relaxed">
-                        <p>
-                            În ultimii <strong class="text-white">7 ani</strong>, am lucrat zi de zi pe podeaua sălii de fitness, ajutând sute de oameni să își transforme corpul și relația cu mâncarea. Am văzut direct pe pielea clienților mei ce funcționează pe termen lung și ce este doar marketing ieftin de pe internet.
-                        </p>
-                        <p>
-                            Am creat acest program de coaching online dintr-un motiv simplu: <strong class="text-emerald-400">rezultatele nu apar din extreme, ci din consecvență.</strong>
-                        </p>
-                        <p>
-                            Nu pregătesc culturiști de performanță care se înfometează pentru o singură zi pe scenă. Lucrez cu oameni reali – antreprenori, studenți, angajați, părinți – care vor să arate bine în haine, să aibă energie de dimineața până seara și să se simtă încrezători în propriul corp, fără să renunțe la viața lor socială.
-                        </p>
-                    </div>
-
-                    <div class="pt-2 grid sm:grid-cols-2 gap-4">
-                        <div class="p-4 rounded-xl bg-[#131C31] border border-slate-800">
-                            <p class="font-display font-bold text-white text-base">Abordare 100% Practică</p>
-                            <p class="text-slate-400 text-sm mt-1">Strategii testate pe sute de clienți reali, adaptate programului tău zilnic.</p>
-                        </div>
-                        <div class="p-4 rounded-xl bg-[#131C31] border border-slate-800">
-                            <p class="font-display font-bold text-white text-base">Educație pe Termen Lung</p>
-                            <p class="text-slate-400 text-sm mt-1">Înveți cum să îți menții rezultatele toată viața, nu doar 3 luni.</p>
-                        </div>
+                        <p>În ultimii <strong class="text-white">7 ani</strong>, am lucrat zi de zi pe podeaua sălii de fitness, ajutând oameni să își transforme corpul și relația cu nutriția.</p>
+                        <p>Am creat acest program dintr-un motiv simplu: <strong class="text-emerald-400">rezultatele nu apar din extreme, ci din consecvență.</strong></p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ==================== 7. SECȚIUNEA ÎNTREBĂRI FRECVENTE (FAQ ACCORDION) ==================== -->
-    <section id="intrebari" class="py-20 lg:py-28 bg-[#0B1120]">
-        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-14 reveal">
-                <span class="text-emerald-400 font-display font-bold text-xs tracking-widest uppercase">Claritate totală</span>
-                <h2 class="font-display font-extrabold text-2xl sm:text-4xl text-white mt-2">
-                    Întrebări Frecvente
-                </h2>
-            </div>
-
-            <div class="space-y-4 reveal" id="faq-container">
-                <!-- FAQ 1 -->
-                <div class="faq-item bg-[#131C31] border border-slate-800 rounded-2xl overflow-hidden transition-colors">
-                    <button type="button" class="faq-trigger w-full px-6 py-5 text-left flex items-center justify-between gap-4 focus:outline-none">
-                        <span class="font-display font-bold text-white text-base sm:text-lg">Nu am timp să gătesc zilnic. Mi se potrivește programul?</span>
-                        <svg class="faq-icon w-5 h-5 text-slate-400 shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/>
-                        </svg>
-                    </button>
-                    <div class="faq-content px-6">
-                        <p class="pb-5 text-slate-300 text-sm sm:text-base leading-relaxed">
-                            Da, 100%. Planul este gândit special pentru oameni ocupați, cu mese rapide (10–15 minute de preparare) și opțiuni inteligente pe care le poți lua la pachet sau cumpăra direct din supermarket/restaurant atunci când ești pe fugă.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- FAQ 2 -->
-                <div class="faq-item bg-[#131C31] border border-slate-800 rounded-2xl overflow-hidden transition-colors">
-                    <button type="button" class="faq-trigger w-full px-6 py-5 text-left flex items-center justify-between gap-4 focus:outline-none">
-                        <span class="font-display font-bold text-white text-base sm:text-lg">Trebuie să merg la sală neapărat sau pot face și acasă?</span>
-                        <svg class="faq-icon w-5 h-5 text-slate-400 shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/>
-                        </svg>
-                    </button>
-                    <div class="faq-content px-6">
-                        <p class="pb-5 text-slate-300 text-sm sm:text-base leading-relaxed">
-                            Ideal este să mergi de 3 ori pe săptămână la sală pentru cele mai rapide rezultate de tonifiere și remodelare corporală, dar putem adapta complet antrenamentele și pentru acasă (cu echipament minimal) dacă programul tău nu îți permite să ajungi la sală.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- FAQ 3 -->
-                <div class="faq-item bg-[#131C31] border border-slate-800 rounded-2xl overflow-hidden transition-colors">
-                    <button type="button" class="faq-trigger w-full px-6 py-5 text-left flex items-center justify-between gap-4 focus:outline-none">
-                        <span class="font-display font-bold text-white text-base sm:text-lg">Cât durează până văd primele rezultate?</span>
-                        <svg class="faq-icon w-5 h-5 text-slate-400 shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/>
-                        </svg>
-                    </button>
-                    <div class="faq-content px-6">
-                        <p class="pb-5 text-slate-300 text-sm sm:text-base leading-relaxed">
-                            Primele schimbări în nivelul de energie, somn și digestie apar încă din prima săptămână. Vizibil în oglindă, pe cântar și la cum îți vin hainele vei observa diferențe clare încă din primele 2–3 săptămâni de consecvență.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- FAQ 4 -->
-                <div class="faq-item bg-[#131C31] border border-slate-800 rounded-2xl overflow-hidden transition-colors">
-                    <button type="button" class="faq-trigger w-full px-6 py-5 text-left flex items-center justify-between gap-4 focus:outline-none">
-                        <span class="font-display font-bold text-white text-base sm:text-lg">Cum decurge discuția gratuită de 15 minute?</span>
-                        <svg class="faq-icon w-5 h-5 text-slate-400 shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/>
-                        </svg>
-                    </button>
-                    <div class="faq-content px-6">
-                        <p class="pb-5 text-slate-300 text-sm sm:text-base leading-relaxed">
-                            Este o discuție relaxată, fără nicio obligație, în care analizăm unde ești acum, care este obiectivul tău și ce te-a blocat până în prezent. Dacă vedem că ne potrivim și te pot ajuta concret, îți prezint exact cum vom lucra împreună.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ==================== 8. SECȚIUNEA FINALĂ + FORMULAR INTERACTIV ==================== -->
+    <!-- ==================== 6. SECȚIUNEA APLICĂ ==================== -->
     <section id="aplica" class="py-20 lg:py-28 bg-[#0F172A] border-t border-slate-800/80 relative">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="bg-[#131C31] border border-slate-800 rounded-3xl p-6 sm:p-10 lg:p-12 shadow-2xl reveal">
-                
-                <!-- Header Form -->
                 <div class="text-center max-w-2xl mx-auto mb-10">
-                    <span class="inline-block px-3.5 py-1 rounded-full bg-emerald-500/15 border border-emerald-500/30 text-emerald-400 text-xs font-display font-bold uppercase tracking-wider mb-3">
-                        Locuri Limitate pentru Atenție 1-la-1
-                    </span>
-                    <h2 class="font-display font-extrabold text-2xl sm:text-4xl text-white">
-                        Ești gata să faci o schimbare care chiar durează?
-                    </h2>
-                    <p class="text-slate-300 mt-3 text-sm sm:text-base">
-                        Completează formularul de mai jos (durează 60 de secunde), iar eu te voi contacta personal pentru o <strong class="text-white">discuție gratuită de 15 minute</strong>.
-                    </p>
+                    <span class="inline-block px-3.5 py-1 rounded-full bg-emerald-500/15 border border-emerald-500/30 text-emerald-400 text-xs font-display font-bold uppercase tracking-wider mb-3">Locuri Limitate pentru Atenție 1-la-1</span>
+                    <h2 class="font-display font-extrabold text-2xl sm:text-4xl text-white">Ești gata să faci o schimbare care chiar durează?</h2>
                 </div>
 
-                <!-- Application Form -->
                 <form id="coaching-form" class="space-y-5" novalidate>
                     <div class="grid sm:grid-cols-2 gap-5">
-                        <!-- Nume -->
-                        <div>
-                            <label for="nume" class="block text-sm font-medium text-slate-200 mb-1.5">Numele tău complet *</label>
-                            <input 
-                                type="text" 
-                                id="nume" 
-                                name="nume" 
-                                required 
-                                placeholder="Ex: Andrei Popescu"
-                                class="w-full px-4 py-3.5 rounded-xl bg-[#0B1120] border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 transition-colors"
-                            >
-                        </div>
-
-                        <!-- Contact (WhatsApp / Instagram) -->
-                        <div>
-                            <label for="contact" class="block text-sm font-medium text-slate-200 mb-1.5">Telefon (WhatsApp) sau Instagram *</label>
-                            <input 
-                                type="text" 
-                                id="contact" 
-                                name="contact" 
-                                required 
-                                placeholder="Ex: 07xx xxx xxx sau @username"
-                                class="w-full px-4 py-3.5 rounded-xl bg-[#0B1120] border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 transition-colors"
-                            >
-                        </div>
+                        <div><label for="nume" class="block text-sm font-medium text-slate-200 mb-1.5">Numele tău complet *</label><input type="text" id="nume" name="nume" required placeholder="Ex: Andrei Popescu" class="w-full px-4 py-3.5 rounded-xl bg-[#0B1120] border border-slate-700 text-white placeholder-slate-500"></div>
+                        <div><label for="contact" class="block text-sm font-medium text-slate-200 mb-1.5">Telefon (WhatsApp) sau Instagram *</label><input type="text" id="contact" name="contact" required placeholder="Ex: 07xx xxx xxx sau @username" class="w-full px-4 py-3.5 rounded-xl bg-[#0B1120] border border-slate-700 text-white placeholder-slate-500"></div>
                     </div>
-
-                    <div class="grid sm:grid-cols-2 gap-5">
-                        <!-- Obiectiv Principal -->
-                        <div>
-                            <label for="obiectiv" class="block text-sm font-medium text-slate-200 mb-1.5">Care este obiectivul tău principal? *</label>
-                            <select 
-                                id="obiectiv" 
-                                name="obiectiv" 
-                                required
-                                class="w-full px-4 py-3.5 rounded-xl bg-[#0B1120] border border-slate-700 text-white focus:outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 transition-colors"
-                            >
-                                <option value="" disabled selected>Alege obiectivul...</option>
-                                <option value="Slabire 4-8 kg">Slăbire (4–8 kg) și definire</option>
-                                <option value="Tonifiere si Recompozitie">Tonifiere & Recompoziție corporală</option>
-                                <option value="Masa musculara">Creștere în masă musculară curată</option>
-                                <option value="Energie si stil de viata">Mai multă energie și structură</option>
-                            </select>
-                        </div>
-
-                        <!-- Zile disponibile -->
-                        <div>
-                            <label for="zile" class="block text-sm font-medium text-slate-200 mb-1.5">Câte zile/săptămână poți aloca mișcării? *</label>
-                            <select 
-                                id="zile" 
-                                name="zile" 
-                                required
-                                class="w-full px-4 py-3.5 rounded-xl bg-[#0B1120] border border-slate-700 text-white focus:outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 transition-colors"
-                            >
-                                <option value="" disabled selected>Alege frecvența...</option>
-                                <option value="3 zile la sala">3 zile / săptămână (la sală)</option>
-                                <option value="4 zile la sala">4 zile / săptămână (la sală)</option>
-                                <option value="Antrenamente acasa">3–4 zile / săptămână (acasă)</option>
-                            </select>
-                        </div>
-                    </div>
-
-                    <!-- Provocare -->
-                    <div>
-                        <label for="provocare" class="block text-sm font-medium text-slate-200 mb-1.5">Ce te-a oprit până acum să ajungi la forma dorită?</label>
-                        <textarea 
-                            id="provocare" 
-                            name="provocare" 
-                            rows="3" 
-                            placeholder="Ex: Programul încărcat la job, lipsa unui plan alimentar clar, pofta de dulce seara..."
-                            class="w-full px-4 py-3 rounded-xl bg-[#0B1120] border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 transition-colors"
-                        ></textarea>
-                    </div>
-
-                    <!-- Error Message Box (No alert()) -->
-                    <div id="form-error" class="hidden p-3.5 rounded-xl bg-rose-500/15 border border-rose-500/40 text-rose-300 text-sm">
-                        Te rugăm să completezi toate câmpurile obligatorii marcate cu * pentru a putea trimite aplicația.
-                    </div>
-
-                    <!-- Submit Button -->
-                    <button type="submit" class="w-full btn-primary text-slate-950 font-display font-extrabold text-base sm:text-lg py-4 px-6 rounded-xl cursor-pointer flex items-center justify-center gap-2">
-                        <span>Aplică acum pentru Coaching 1-la-1</span>
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
-                        </svg>
-                    </button>
-
-                    <p class="text-center text-xs text-slate-400">
-                        Datele tale sunt 100% confidențiale. Zero spam, doar o discuție sinceră despre obiectivele tale.
-                    </p>
+                    <div id="form-error" class="hidden p-3.5 rounded-xl bg-rose-500/15 border border-rose-500/40 text-rose-300 text-sm">Te rugăm să completezi toate câmpurile obligatorii marcate cu *.</div>
+                    <button type="submit" class="w-full btn-primary text-slate-950 font-display font-extrabold text-base py-4 px-6 rounded-xl">Aplică acum pentru Coaching 1-la-1</button>
                 </form>
 
-                <!-- Success State (Shown after submission) -->
-                <div id="form-success" class="hidden text-center py-8 space-y-5">
-                    <div class="w-16 h-16 rounded-full bg-emerald-500/20 border border-emerald-500/40 text-emerald-400 flex items-center justify-center mx-auto">
-                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
-                        </svg>
-                    </div>
-                    <h3 class="font-display font-extrabold text-2xl sm:text-3xl text-white">
-                        Aplicația ta a fost trimisă cu succes, <span id="applicant-name" class="text-emerald-400"></span>!
-                    </h3>
-                    <p class="text-slate-300 max-w-lg mx-auto text-sm sm:text-base leading-relaxed">
-                        Am primit răspunsurile tale. Te voi contacta în următoarele 24 de ore pe WhatsApp sau Instagram pentru a stabili discuția noastră gratuită de 15 minute.
-                    </p>
-                    <div class="pt-3 flex flex-col sm:flex-row items-center justify-center gap-4">
-                        <a href="https://instagram.com/rolyszabo.coach" target="_blank" rel="noopener noreferrer" class="btn-primary text-slate-950 font-display font-bold text-sm px-6 py-3.5 rounded-xl inline-flex items-center gap-2">
-                            <span>Scrie-mi direct pe Instagram @rolyszabo.coach</span>
-                        </a>
-                        <button type="button" id="reset-form-btn" class="text-sm text-slate-400 hover:text-white underline">
-                            Trimite altă aplicație
-                        </button>
-                    </div>
-                </div>
-
+                <div id="form-success" class="hidden text-center py-8"><h3 class="font-display font-extrabold text-2xl text-white">Aplicația a fost înregistrată!</h3></div>
             </div>
         </div>
     </section>
 
-    <!-- ==================== 9. FOOTER ==================== -->
     <footer class="bg-[#0B1120] border-t border-slate-800/80 py-10">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-slate-400">
-            <div class="flex items-center gap-2">
-                <span class="font-display font-extrabold text-white">ROLI SZABO</span>
-                <span>•</span>
-                <span>Online Coaching 1-la-1</span>
-            </div>
-
-            <div class="flex items-center gap-6">
-                <a href="https://instagram.com/rolyszabo.coach" target="_blank" rel="noopener noreferrer" class="text-slate-300 hover:text-emerald-400 transition-colors inline-flex items-center gap-1.5 font-medium">
-                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-                    </svg>
-                    <span>@rolyszabo.coach</span>
-                </a>
-            </div>
-
-            <p class="text-xs text-slate-500">
-                &copy; <span id="current-year"></span> Roli Szabo. Toate drepturile rezervate.
-            </p>
+            <span class="font-display font-extrabold text-white">ROLI SZABO • Online Coaching 1-la-1</span>
+            <a href="https://instagram.com/rolyszabo.coach" target="_blank" rel="noopener noreferrer" class="text-slate-300 hover:text-emerald-400">@rolyszabo.coach</a>
+            <p class="text-xs text-slate-500">&copy; <span id="current-year"></span> Roli Szabo.</p>
         </div>
     </footer>
 
-    <!-- ==================== INTERACTIVITY & ANIMATIONS SCRIPT ==================== -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            // 1. Set current year in footer
             const yearEl = document.getElementById('current-year');
             if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-            // 2. Mobile Menu Toggle
             const mobileMenuBtn = document.getElementById('mobile-menu-btn');
             const mobileMenu = document.getElementById('mobile-menu');
-            const mobileLinks = document.querySelectorAll('.mobile-link');
-
             if (mobileMenuBtn && mobileMenu) {
-                mobileMenuBtn.addEventListener('click', () => {
-                    mobileMenu.classList.toggle('hidden');
-                });
-
-                mobileLinks.forEach(link => {
-                    link.addEventListener('click', () => {
-                        mobileMenu.classList.add('hidden');
-                    });
-                });
+                mobileMenuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+                document.querySelectorAll('.mobile-link').forEach(link => link.addEventListener('click', () => mobileMenu.classList.add('hidden')));
             }
 
-            // 3. FAQ Accordion Interaction
-            const faqItems = document.querySelectorAll('.faq-item');
-            faqItems.forEach(item => {
-                const trigger = item.querySelector('.faq-trigger');
-                trigger.addEventListener('click', () => {
-                    const isOpen = item.classList.contains('open');
-                    
-                    // Close all other items for clean UX
-                    faqItems.forEach(otherItem => {
-                        otherItem.classList.remove('open');
-                        otherItem.classList.remove('border-emerald-500/40');
-                    });
-
-                    if (!isOpen) {
-                        item.classList.add('open');
-                        item.classList.add('border-emerald-500/40');
-                    }
-                });
-            });
-
-            // 4. Scroll Reveal Observer
-            const revealElements = document.querySelectorAll('.reveal');
             const revealObserver = new IntersectionObserver((entries, observer) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
@@ -831,51 +296,15 @@
                         observer.unobserve(entry.target);
                     }
                 });
-            }, {
-                threshold: 0.12,
-                rootMargin: '0px 0px -40px 0px'
-            });
+            }, { threshold: 0.12 });
+            document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 
-            revealElements.forEach(el => revealObserver.observe(el));
-
-            // 5. Interactive Application Form Handling
             const form = document.getElementById('coaching-form');
             const formError = document.getElementById('form-error');
             const formSuccess = document.getElementById('form-success');
-            const applicantNameEl = document.getElementById('applicant-name');
-            const resetFormBtn = document.getElementById('reset-form-btn');
-
             if (form) {
                 form.addEventListener('submit', (e) => {
-                    e.preventDefault();
-                    
-                    const nume = document.getElementById('nume').value.trim();
-                    const contact = document.getElementById('contact').value.trim();
-                    const obiectiv = document.getElementById('obiectiv').value;
-                    const zile = document.getElementById('zile').value;
-
-                    if (!nume || !contact || !obiectiv || !zile) {
-                        formError.classList.remove('hidden');
-                        return;
-                    }
-
-                    formError.classList.add('hidden');
-                    
-                    // Extract first name for friendly confirmation
-                    const firstName = nume.split(' ')[0];
-                    applicantNameEl.textContent = firstName;
-
-                    // Transition to success view
-                    form.classList.add('hidden');
-                    formSuccess.classList.remove('hidden');
-                });
-            }
-
-            if (resetFormBtn) {
-                resetFormBtn.addEventListener('click', () => {
-                    form.reset();
-                    formSuccess.classList.add('hidden');
-                    form.classList.remove('hidden');
+                    e.preventElementDefault();
                 });
             }
         });
