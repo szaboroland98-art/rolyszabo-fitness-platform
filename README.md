@@ -1,1 +1,1 @@
-# rolyszabo-fitness-platform
+# fitness-platform
