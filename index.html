@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ro" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roli Szabo | Coaching Online 1-la-1 – Transformare Sustenabilă</title>
+    <meta name="description" content="Slăbește 4–8 kg în următoarele 90 de zile și remodelează-ți corpul, mâncând alimentele care îți plac. Sistemul de coaching 1-la-1 creat de Roli Szabo.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'], display: ['Plus Jakarta Sans', 'sans-serif'] },
+                    colors: { slateDark: '#0B1120', slateCard: '#131C31', slateBorder: '#1E293B', emeraldAccent: '#10B981', limeAccent: '#22C55E' }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background-color: #0B1120; color: #F8FAFC; overflow-x: hidden; }
+        .hero-glow { background: radial-gradient(circle at 75% 25%, rgba(16,185,129,.14) 0%, rgba(11,17,32,0) 60%); }
+        .card-hover { transition: transform .3s cubic-bezier(.22,1,.36,1), border-color .3s ease, box-shadow .3s ease; }
+        .card-hover:hover { transform: translateY(-4px); border-color: rgba(16,185,129,.45); box-shadow: 0 20px 40px -15px rgba(16,185,129,.12); }
+        .btn-primary { background: linear-gradient(135deg,#10B981 0%,#059669 100%); transition: all .25s ease; }
+        .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 12px 28px -6px rgba(16,185,129,.45); filter: brightness(1.06); }
+        .reveal { opacity: 0; transform: translateY(24px); transition: opacity .7s ease-out, transform .7s ease-out; }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+        .faq-content { max-height: 0; overflow: hidden; transition: max-height .35s cubic-bezier(.4,0,.2,1), opacity .3s ease; opacity: 0; }
+        .faq-item.open .faq-content { max-height: 320px; opacity: 1; }
+        .faq-item.open .faq-icon { transform: rotate(180deg); color: #10B981; }
+    </style>
+</head>
+<body class="antialiased selection:bg-emerald-500 selection:text-slate-950">
+<header class="fixed top-0 left-0 right-0 z-50 bg-[#0B1120]/85 backdrop-blur-md border-b border-slate-800/80">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+        <a href="#" class="flex items-center gap-2.5 group">
+            <div class="w-9 h-9 rounded-lg bg-emerald-500/15 border border-emerald-500/40 flex items-center justify-center text-emerald-400 font-display font-extrabold text-lg">RS</div>
+            <div class="flex flex-col"><span class="font-display font-extrabold tracking-tight text-white text-base sm:text-lg leading-none">ROLI SZABO</span><span class="text-[11px] font-semibold tracking-widest text-emerald-400 uppercase mt-0.5">Online Coaching</span></div>
+        </a>
+        <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
+            <a href="#probleme" class="hover:text-emerald-400 transition-colors">De ce nu merge</a><a href="#metoda" class="hover:text-emerald-400 transition-colors">Metoda</a><a href="#rezultate" class="hover:text-emerald-400 transition-colors">Rezultate</a><a href="#despre" class="hover:text-emerald-400 transition-colors">Despre Mine</a><a href="#intrebari" class="hover:text-emerald-400 transition-colors">Întrebări</a>
+        </nav>
+        <div class="flex items-center gap-3"><a href="#aplica" class="btn-primary text-slate-950 font-display font-bold text-xs sm:text-sm px-4 sm:px-5 py-2.5 rounded-xl">Aplică Acum</a><button id="mobile-menu-btn" aria-label="Deschide meniul" class="md:hidden p-2 rounded-lg text-slate-300 hover:bg-slate-800"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg></button></div>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden bg-[#0F172A] border-b border-slate-800 px-4 pt-2 pb-5 space-y-2">
+        <a href="#probleme" class="mobile-link block px-3 py-2.5 rounded-lg text-slate-300 hover:text-emerald-400">De ce nu merge</a><a href="#metoda" class="mobile-link block px-3 py-2.5 rounded-lg text-slate-300 hover:text-emerald-400">Metoda</a><a href="#rezultate" class="mobile-link block px-3 py-2.5 rounded-lg text-slate-300 hover:text-emerald-400">Rezultate</a><a href="#despre" class="mobile-link block px-3 py-2.5 rounded-lg text-slate-300 hover:text-emerald-400">Despre Mine</a><a href="#intrebari" class="mobile-link block px-3 py-2.5 rounded-lg text-slate-300 hover:text-emerald-400">Întrebări</a>
+    </div>
+</header>
+
+<section class="relative pt-32 pb-20 lg:pt-40 lg:pb-28 hero-glow border-b border-slate-800/60">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8"><div class="grid lg:grid-cols-12 gap-12 lg:gap-10 items-center">
+        <div class="lg:col-span-7 space-y-6">
+            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-display font-bold"><span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>Coaching Online 1-la-1 • Locuri Limitate</div>
+            <h1 class="font-display font-extrabold text-3xl sm:text-4xl lg:text-[44px] text-white leading-[1.16] tracking-tight">Slăbește <span class="text-emerald-400">4–8 kg în următoarele 90 de zile</span> și remodelează-ți corpul, mâncând alimentele care îți plac – fără să te înfometezi.</h1>
+            <p class="text-slate-300 text-base sm:text-lg leading-relaxed max-w-2xl">Sistemul de coaching 1-la-1 creat pentru oameni ocupați, bazat pe <strong class="text-white">7 ani de experiență practică</strong> în sala de fitness.</p>
+            <div class="pt-2 flex flex-col sm:flex-row gap-4"><a href="#aplica" class="btn-primary text-slate-950 font-display font-extrabold text-base px-7 py-4 rounded-xl text-center">Vreau o discuție gratuită de 15 minute</a><a href="#metoda" class="px-6 py-4 rounded-xl bg-slate-800/70 border border-slate-700 text-white font-display font-semibold text-base text-center">Vezi cum funcționează</a></div>
+        </div>
+        <div class="lg:col-span-5"><div class="relative rounded-2xl bg-[#131C31] border border-slate-800 p-4 sm:p-5 shadow-2xl"><div class="relative aspect-[4/4.3] rounded-xl overflow-hidden bg-slate-900 border border-slate-800"><img src="https://placehold.co/600x650/131C31/10B981?text=ROLI+SZABO%0A%40rolyszabo.coach" alt="Roli Szabo - Antrenor Personal" class="w-full h-full object-cover"><div class="absolute inset-0 bg-gradient-to-t from-[#0B1120] via-transparent to-transparent opacity-90"></div><div class="absolute bottom-4 left-4 right-4 flex items-end justify-between"><div><p class="font-display font-bold text-white text-lg">Roli Szabo</p><p class="text-emerald-400 text-xs">@rolyszabo.coach</p></div><span class="px-3 py-1 rounded-lg bg-emerald-500/20 border border-emerald-500/40 text-emerald-300 text-xs">7+ Ani Experiență</span></div></div></div></div>
+    </div></div>
+</section>
+
+<section id="probleme" class="py-20 bg-[#0B1120]"><div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8"><div class="max-w-3xl mx-auto text-center mb-14 reveal"><span class="text-emerald-400 font-display font-bold text-xs tracking-widest uppercase">Realitatea din teren</span><h2 class="font-display font-extrabold text-2xl sm:text-4xl text-white mt-2">Ai încercat deja să slăbești sau să te tonifiezi, dar te-ai lovit de aceleași obstacole?</h2></div><div class="grid md:grid-cols-2 gap-6">
+<div class="reveal card-hover bg-[#131C31] border border-slate-800 rounded-2xl p-6 sm:p-8"><h3 class="font-display font-bold text-white text-lg">Efectul „Luni încep, Vineri renunț”</h3><p class="text-slate-400 mt-2">Dietele stricte duc la foame constantă și abandon rapid.</p></div>
+<div class="reveal card-hover bg-[#131C31] border border-slate-800 rounded-2xl p-6 sm:p-8"><h3 class="font-display font-bold text-white text-lg">Program încărcat și zero timp</h3><p class="text-slate-400 mt-2">Ai nevoie de o metodă simplă, adaptată vieții tale.</p></div>
+<div class="reveal card-hover bg-[#131C31] border border-slate-800 rounded-2xl p-6 sm:p-8"><h3 class="font-display font-bold text-white text-lg">Muncești la sală, dar stagnezi</h3><p class="text-slate-400 mt-2">Îți lipsesc structura, progresia și nutriția adaptată.</p></div>
+<div class="reveal card-hover bg-[#131C31] border border-slate-800 rounded-2xl p-6 sm:p-8"><h3 class="font-display font-bold text-white text-lg">Sunteți sătui de planurile generice</h3><p class="text-slate-400 mt-2">Ai nevoie de un plan personalizat, sustenabil și flexibil.</p></div>
+</div></div></section>
+
+<section id="metoda" class="py-20 bg-[#0F172A] border-y border-slate-800/70"><div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8"><div class="text-center mb-14 reveal"><span class="text-emerald-400 font-display font-bold text-xs tracking-widest uppercase">Sistemul pas cu pas</span><h2 class="font-display font-extrabold text-2xl sm:text-4xl text-white mt-2">Un sistem care se mulează pe viața ta</h2></div><div class="grid md:grid-cols-2 gap-6 lg:gap-8"><div class="reveal card-hover bg-[#131C31] border border-slate-800 rounded-2xl p-7"><span class="text-emerald-400 text-3xl font-bold">01</span><h3 class="text-xl font-bold mt-3">Nutriție flexibilă</h3><p class="text-slate-300 mt-2">Un plan construit pe preferințele și programul tău.</p></div><div class="reveal card-hover bg-[#131C31] border border-slate-800 rounded-2xl p-7"><span class="text-emerald-400 text-3xl font-bold">02</span><h3 class="text-xl font-bold mt-3">Antrenamente structurate</h3><p class="text-slate-300 mt-2">3–4 zile pe săptămână, la sală sau acasă.</p></div><div class="reveal card-hover bg-[#131C31] border border-slate-800 rounded-2xl p-7"><span class="text-emerald-400 text-3xl font-bold">03</span><h3 class="text-xl font-bold mt-3">Monitorizare săptămânală</h3><p class="text-slate-300 mt-2">Analiză, feedback și ajustări reale în fiecare săptămână.</p></div><div class="reveal card-hover bg-[#131C31] border border-slate-800 rounded-2xl p-7"><span class="text-emerald-400 text-3xl font-bold">04</span><h3 class="text-xl font-bold mt-3">Suport direct</h3><p class="text-slate-300 mt-2">Contact direct pe WhatsApp pentru întrebări și ajustări.</p></div></div></div></section>
+
+<section id="rezultate" class="py-20 bg-[#0B1120]"><div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8"><div class="text-center mb-14 reveal"><span class="text-emerald-400 font-bold text-xs uppercase">Studii de caz</span><h2 class="text-3xl sm:text-4xl font-extrabold mt-2">Oameni ocupați, rezultate reale</h2></div><div class="grid md:grid-cols-3 gap-6"><div class="reveal card-hover bg-[#131C31] border border-slate-800 rounded-2xl p-6"><span class="text-emerald-400 font-bold">+4.2 kg Masă Curată</span><p class="text-slate-300 italic mt-5">„Am reușit să pun masă musculară și să rămân puternică.”</p><p class="font-bold mt-5">Bernadett, 27 ani</p></div><div class="reveal card-hover bg-[#131C31] border border-slate-800 rounded-2xl p-6"><span class="text-emerald-400 font-bold">Slăbire sustenabilă</span><p class="text-slate-300 italic mt-5">„Am o structură simplă care funcționează chiar și în ture.”</p><p class="font-bold mt-5">Andreea, 28 ani</p></div><div class="reveal card-hover bg-[#131C31] border border-slate-800 rounded-2xl p-6"><span class="text-emerald-400 font-bold">-7 kg & Talie Redusă</span><p class="text-slate-300 italic mt-5">„Fără înfometare, cu progres constant și mai multă energie.”</p><p class="font-bold mt-5">Cristian, 42 ani</p></div></div></div></section>
+
+<section id="despre" class="py-20 bg-[#0F172A] border-y border-slate-800/70"><div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 reveal"><span class="text-emerald-400 text-xs uppercase font-bold">Cine te va ghida</span><h2 class="font-extrabold text-3xl sm:text-4xl mt-2">Salut, sunt Roli!</h2><p class="text-slate-300 mt-5 max-w-3xl text-lg">În ultimii 7 ani am lucrat pe podeaua sălii de fitness, ajutând oamenii să își transforme corpul și relația cu alimentația. Rezultatele apar din consecvență, nu din extreme.</p></div></section>
+
+<section id="intrebari" class="py-20 bg-[#0B1120]"><div class="max-w-3xl mx-auto px-4 reveal"><div class="text-center mb-12"><span class="text-emerald-400 text-xs uppercase font-bold">Claritate totală</span><h2 class="text-3xl sm:text-4xl font-extrabold mt-2">Întrebări Frecvente</h2></div><div id="faq-container" class="space-y-4"><div class="faq-item bg-[#131C31] border border-slate-800 rounded-2xl"><button type="button" class="faq-trigger w-full px-6 py-5 text-left flex justify-between"><span class="font-bold">Nu am timp să gătesc zilnic. Mi se potrivește?</span><svg class="faq-icon w-5 h-5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg></button><div class="faq-content px-6"><p class="pb-5 text-slate-300">Da. Programul include mese rapide și opțiuni adaptate programului tău.</p></div></div><div class="faq-item bg-[#131C31] border border-slate-800 rounded-2xl"><button type="button" class="faq-trigger w-full px-6 py-5 text-left flex justify-between"><span class="font-bold">Trebuie să merg neapărat la sală?</span><svg class="faq-icon w-5 h-5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg></button><div class="faq-content px-6"><p class="pb-5 text-slate-300">Putem adapta antrenamentele complet pentru casă sau sală.</p></div></div></div></div></section>
+
+<section id="aplica" class="py-20 bg-[#0F172A]"><div class="max-w-4xl mx-auto px-4"><div class="bg-[#131C31] border border-slate-800 rounded-3xl p-6 sm:p-10 reveal"><div class="text-center mb-8"><span class="inline-block px-3.5 py-1 rounded-full bg-emerald-500/15 text-emerald-400 text-xs font-bold mb-3">LOCURI LIMITATE</span><h2 class="font-extrabold text-2xl sm:text-4xl">Ești gata să faci o schimbare care chiar durează?</h2></div><form id="coaching-form" class="space-y-5" novalidate><div class="grid sm:grid-cols-2 gap-5"><div><label for="nume" class="block text-sm mb-1.5">Numele tău complet *</label><input id="nume" name="nume" required placeholder="Ex: Andrei Popescu" class="w-full px-4 py-3.5 rounded-xl bg-[#0B1120] border border-slate-700"></div><div><label for="contact" class="block text-sm mb-1.5">Telefon sau Instagram *</label><input id="contact" name="contact" required placeholder="Ex: 07xx xxx xxx sau @username" class="w-full px-4 py-3.5 rounded-xl bg-[#0B1120] border border-slate-700"></div></div><div id="form-error" class="hidden p-3.5 rounded-xl bg-rose-500/15 border border-rose-500/40 text-rose-300 text-sm">Completează câmpurile obligatorii.</div><button type="submit" class="w-full btn-primary text-slate-950 font-extrabold py-4 rounded-xl">Aplică acum pentru Coaching 1-la-1</button></form><div id="form-success" class="hidden text-center py-8"><h3 class="text-2xl font-extrabold">Aplicația a fost trimisă, <span id="applicant-name" class="text-emerald-400"></span>!</h3><a href="https://instagram.com/rolyszabo.coach" target="_blank" rel="noopener noreferrer" class="inline-block mt-5 btn-primary text-slate-950 px-6 py-3 rounded-xl font-bold">Contactează-mă pe Instagram</a></div></div></div></section>
+
+<footer class="bg-[#0B1120] border-t border-slate-800/80 py-10"><div class="max-w-6xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-slate-400"><span class="font-extrabold text-white">ROLI SZABO • Online Coaching 1-la-1</span><a href="https://instagram.com/rolyszabo.coach" target="_blank" rel="noopener noreferrer" class="hover:text-emerald-400">@rolyszabo.coach</a><span>&copy; <span id="current-year"></span> Roli Szabo</span></div></footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+ const yearEl=document.getElementById('current-year'); if(yearEl) yearEl.textContent=new Date().getFullYear();
+ const menuBtn=document.getElementById('mobile-menu-btn'), menu=document.getElementById('mobile-menu'); if(menuBtn&&menu){menuBtn.addEventListener('click',()=>menu.classList.toggle('hidden')); document.querySelectorAll('.mobile-link').forEach(a=>a.addEventListener('click',()=>menu.classList.add('hidden')));}
+ document.querySelectorAll('.faq-item').forEach(item=>{item.querySelector('.faq-trigger').addEventListener('click',()=>{const open=item.classList.contains('open');document.querySelectorAll('.faq-item').forEach(i=>i.classList.remove('open','border-emerald-500/40'));if(!open)item.classList.add('open','border-emerald-500/40')})});
+ const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('active');observer.unobserve(e.target)}}),{threshold:.12});document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+ const form=document.getElementById('coaching-form'),error=document.getElementById('form-error'),success=document.getElementById('form-success'),nameEl=document.getElementById('applicant-name');
+ form.addEventListener('submit',e=>{e.preventDefault();const name=document.getElementById('nume').value.trim(),contact=document.getElementById('contact').value.trim();if(!name||!contact){error.classList.remove('hidden');return}error.classList.add('hidden');nameEl.textContent=name.split(' ')[0];form.classList.add('hidden');success.classList.remove('hidden')});
+});
+</script>
+</body>
+</html>
